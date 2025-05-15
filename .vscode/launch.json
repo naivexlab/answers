@@ -1,0 +1,36 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Frontend",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}/frontend/src"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Backend Typescript",
+      "program": "${workspaceFolder}/backend/out/src/server.js", // not ts
+      "outFiles": ["${workspaceFolder}/backend/out/**/*.js"],
+      "console": "integratedTerminal",
+      "preLaunchTask": "Build TypeScript",
+    },
+    {
+        "name": "AIService",
+        "type": "debugpy",
+        "request": "launch",
+        "module": "uvicorn",
+        "args": ["main:app", "--host", "0.0.0.0", "--port", "5000", "--reload"],
+        "justMyCode": true,
+        "cwd": "${workspaceFolder}/aiservice"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "All Services",
+      "configurations": ["Frontend", "Backend Typescript", "AIService"]
+    }
+  ]
+}

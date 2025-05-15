@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+env/
+venv/
+.idea/
+.vscode/
+dist/
+*.egg-info/
+.env
+docker-compose.yml
