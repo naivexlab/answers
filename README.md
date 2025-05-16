@@ -1,7 +1,14 @@
 
 ## Demo
-https://answers-1gpx.onrender.com
 
+### spin up services (would take a min)
+
+    https://answers-aiservice.onrender.com
+    https://answers-backend.onrender.com
+
+    website:
+    https://answers-1gpx.onrender.com
+    
 
 ## Build and Run
 
