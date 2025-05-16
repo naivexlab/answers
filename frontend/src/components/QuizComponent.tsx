@@ -105,6 +105,11 @@ const Quiz: React.FC = () => {
           value={topic}
           onChange={(e) => setTopic(e.target.value)}
           disabled={loading}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter' && !loading && topic) {
+              handleGenerateQuiz();
+            }
+          }}
         />
         <button 
           onClick={handleGenerateQuiz}
