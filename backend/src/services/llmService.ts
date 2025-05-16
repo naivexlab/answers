@@ -56,7 +56,7 @@ export class LLMService {
     public async generateQuiz(topic: string, model: 'gemini' | 'claude' = 'gemini'): Promise<any> {
         try {
             const prompt = this.createQuizPrompt(topic);
-            const response = await axios.post<LLMRequest>(`${this.baseUrl}/api/llm`, {
+            const response = await axios.post<LLMRequest>(`${this.baseUrl}/ai/llm`, {
                 prompt,
                 model
             });
